@@ -1,9 +1,7 @@
-isaacs
-======
+marak
+=====
 
-Your very own isaacs.
-
-![isaacs](http://substack.net/images/isaacs.png)
+Your very own marak.
 
 examples
 ========
@@ -12,70 +10,72 @@ speak.js
 --------
 
 ````javascript
-var isaacs = require("isaacs")
+var marak = require('marak')
 
-isaacs(function (izs) {
-  var s = isaacs.speak().join(" ")
-  console.log(s)
-  izs.end()
-})
+marak(function (m) {
+    var s = m.speak().join(' ');
+    console.log(s);
+    m.end();
+});
 ````
 
 output:
 
-    because I'm also path munging in the child process implementation for windows
+    get a jar of cherries, drain the juice out of them, fill it back up with Everclear
 
 methods
 =======
 
-var isaacs = require("isaacs")
+var marak = require('marak')
 
-isaacs(cb)
+marak(cb)
 ----------
 
-Calls `cb(isaacs)` once your isaacs has loaded enough to speak.
+Calls `cb(marak)` once your marak has loaded enough to speak.
 
-isaacs.speak(text=isaacs.markov.pick())
----------------------------------------
+marak.speak(text=marak.markov.pick())
+-------------------------------------
 
-Talk to your isaacs with some `text` or else request that your issacs talk to
+Talk to your marak with some `text` or else request that your issacs talk to
 you.
 
-isaacs.markov
+marak.markov
 -------------
 
-The [markov](https://github.com/substack/node-markov) handle of your isaacs.
+The [markov](https://github.com/substack/node-markov) handle of your marak.
 
 command-line
 ============
 
-Run `isaacs` to launch an interactive chat:
+Run `marak` to launch an interactive chat:
 
-    $ isaacs
+    $ marak
     > oh hello
-    and yeah, totally not your fault. i have a var I want to escape arguments in
-    theCommand
-    > pretty much
-    ok, its still beyond moment :P my level at this
-    > you can do it, you just have to have belief in belief
-    time though all the I can do it
+    lib a client and wrote up. fucks it one plugin issue maybe in the it
+    sometime I saw am sure hmm I oh hello,
+    > hook.io
+    can websockets talk with hook.io?
+    > haters
+    stupid reddit haters :/
 
-Or to get `n` lines of isaacs:
+Or to get `n` lines of marak:
 
-    $ isaacs -n 3
-    how should i go update it about switching but doesn't the maintainer that name of the module wanted
-    i'd love or separate. to take of npmjs.org a stab a part at it, either as
-    question this is a serious
+````
+$ marak -n 3
+the only thing that's target-folder-specific is the node_modules folder. if you move that out of the great enmity the anglo-canadians have for communication layer the French of the Canadians, and, the storming
+beta account so where is my
+I looked a few knobs and yours. call the whole thing
+````
 
 install
 =======
 
 With [npm](http://npmjs.org) do:
 
-    npm install isaacs
+    npm install marak
 
-to get issacs as a library or:
+to get marak as a library or:
 
-    npm install -g isaacs
+    npm install -g marak
 
-to get the issacs command.
+to get the marak command.
