@@ -1,28 +1,28 @@
-var isaacs = require("isaacs")
-var argv = require("optimist").argv
+var marak = require("marak");
+var argv = require("optimist").argv;
 
 if (argv.h || argv.help) {
-  console.error("Usage:\n  isaacs\n  isaacs -n LINES\n")
+    console.error("Usage:\n  marak\n  marak -n LINES\n");
 }
 else if (argv.n) {
-  isaacs(function (izs) {
-    for (var i = 0; i < argv.n; i++) {
-      var s = izs.speak().join(" ")
-      console.log(s)
-    }
-    izs.end()
-  })
+    marak(function (m) {
+        for (var i = 0; i < argv.n; i++) {
+            var s = m.speak().join(" ");
+            console.log(s);
+        }
+        m.end();
+    });
 }
 else {
-  var stdin = process.openStdin()
-  isaacs(function (izs) {
-    process.stdout.write("> ")
-    
-    stdin.on("data", function (buf) {
-      var line = buf.toString()
-      var s = izs.speak(line).join(" ")
-      console.log(s)
-      process.stdout.write("> ")
+    var stdin = process.openStdin();
+    marak(function (m) {
+        process.stdout.write("> ");
+        
+        stdin.on("data", function (buf) {
+            var line = buf.toString();
+            var s = m.speak(line).join(" ");
+            console.log(s);
+            process.stdout.write("> ");
+        });
     })
-  })
 }

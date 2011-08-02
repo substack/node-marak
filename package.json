@@ -1,37 +1,37 @@
-{ "name" : "isaacs"
-, "version" : "0.0.1"
-, "description" : "Your very own isaacs."
-, "main" : "index.js"
-, "bin" : { "isaacs" : "bin/cli.js" }
-, "directories" :
-  { "lib" : "."
-  , "example" : "example"
-  }
-, "dependencies" : { "markov" : "0.0.6" }
-, "scripts" :
-  { "install" : "curl http://substack.net/data/isaacs.txt -o logs.txt"
-  }
-, "repository" :
-  { "type" : "git"
-  , "url" : "http://github.com/substack/node-isaacs.git"
-  }
-, "keywords" :
-  [ "isaac"
-  , "z"
-  , "schlueter"
-  , "markov"
-  , "impersonation"
-  , "crude"
-  , "digital"
-  , "clone"
-  , "brain upload"
-  , "a sign of things to come"
-]
-, "author" :
-  { "name" : "James Halliday"
-  , "email" : "mail@substack.net"
-  , "url" : "http://substack.net"
-}
-, "license" : "MIT/X11"
-, "engine" : { "node" : ">=0.4" }
+{
+    "name" : "marak",
+    "version" : "0.0.1",
+    "description" : "Your very own marak.",
+    "main" : "index.js",
+    "bin" : { "marak" : "bin/cli.js" },
+    "directories" : {
+        "lib" : ".",
+        "example" : "example"
+    },
+    "dependencies" : { "markov" : "0.0.6" },
+    "scripts" : {
+        "install" : "curl http://substack.net/data/marak.txt -o logs.txt"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "http://github.com/substack/node-marak.git"
+    },
+    "keywords" : [
+        "marak",
+        "squires",
+        "markov",
+        "impersonation",
+        "crude",
+        "digital",
+        "clone",
+        "brain upload",
+        "a sign of things to come"
+    ],
+    "author" : {
+        "name" : "James Halliday",
+        "email" : "mail@substack.net",
+        "url" : "http://substack.net"
+    },
+    "license" : "MIT/X11",
+    "engine" : { "node" : ">=0.4" }
 }

@@ -1,12 +1,12 @@
-var isaacs = require("isaacs")
+var marak = require('marak')
 var stdin = process.openStdin()
 
-isaacs(function (izs) {
+marak(function (m) {
   process.stdout.write("> ")
   
   stdin.on("data", function (buf) {
     var line = buf.toString()
-    var s = izs.speak(line).join(" ")
+    var s = m.speak(line).join(" ")
     console.log(s)
     process.stdout.write("> ")
   })

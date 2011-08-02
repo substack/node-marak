@@ -1,37 +1,36 @@
-var markov = require("markov")
-var fs = require("fs")
+var markov = require("markov");
+var fs = require("fs");
+var stream = fs.createReadStream(__dirname + "/logs.txt");
 
-var stream = fs.createReadStream(__dirname + "/logs.txt")
-
-exports.ready = false
-exports.loaded = false
+exports.ready = false;
+exports.loaded = false;
 var callbacks = []
 
-var isaacs = module.exports = function (cb) {
-  if (exports.ready) cb(isaacs)
-  else callbacks.push(cb)
-  return isaacs
+var marak = module.exports = function (cb) {
+    if (exports.ready) cb(marak)
+    else callbacks.push(cb)
+    return marak;
 }
 
 stream.once("data", function () {
-  process.nextTick(function () {
-    exports.ready = true
-    callbacks.forEach(function (cb) {
-      cb(isaacs)
+    process.nextTick(function () {
+        exports.ready = true
+        callbacks.forEach(function (cb) {
+            cb(marak);
+        })
     })
-  })
 })
 
-var m = isaacs.markov = markov(2)
+var m = marak.markov = markov(2);
 m.seed(stream, function () {
-  exports.loaded = true
-})
+    exports.loaded = true;
+});
 
-isaacs.speak = function (text) {
-  if (!text) text = m.pick()
-  return m.respond(text)
+marak.speak = function (text) {
+    if (!text) text = m.pick();
+    return m.respond(text);
 }
 
-isaacs.end = function () {
-  stream.destroy()
+marak.end = function () {
+    stream.destroy();
 }
