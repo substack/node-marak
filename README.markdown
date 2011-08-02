@@ -36,7 +36,7 @@ Calls `cb(marak)` once your marak has loaded enough to speak.
 marak.speak(text=marak.markov.pick())
 -------------------------------------
 
-Talk to your marak with some `text` or else request that your issacs talk to
+Talk to your marak with some `text` or else request that your marak talk to
 you.
 
 marak.markov
